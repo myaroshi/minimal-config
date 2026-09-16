@@ -102,5 +102,3 @@ sudo nixos-rebuild switch --flake /etc/nixos#pentium
 NixOS's flake workflow uses the `nixosConfigurations.<name>` attribute, so `#pentium` corresponds to the name in `flake.nix`.
 
 One thing I would **not** enable initially is LightDM autologin. Get the machine booting, measure how much RAM/X startup time it uses, then we can strip it even further. NixOS also supports running X without a display manager at all, which would let us make an even more minimal IceWM setup later.
-
-If your Pentium is particularly weak, the first thing I'd test after this is **Alacritty itself**—the terminal is likely to be a more interesting performance variable than IceWM.
